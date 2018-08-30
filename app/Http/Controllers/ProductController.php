@@ -14,7 +14,12 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+
+        $products = Product::all();// get  all the product in the database
+
+        return view('products.index', ['products' => $products]);
+
+        dump($products);
     }
 
     /**
